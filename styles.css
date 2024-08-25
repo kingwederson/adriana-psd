@@ -143,20 +143,25 @@ footer p {
 summary {
     list-style: none;
     padding: 10px 10px 10px 40px;
-    background: url(https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg) no-repeat 14px 50%;
-    background-size: 18px;
+    background-size: 30px;
     font-weight: bold;
     background-color: #e0d9d8;
     color: #308e4e;
     border-radius: 5px;
-}
-  
-summary::-webkit-details-marker {
-    display: none;
-}
-  
-details[open] summary {
+    cursor: pointer;
     border-radius: 5px 5px 0 0;
+}
+
+summary:before {
+    content: ' ►';
+    color:black;
+    font-size: 30px;
+}
+
+details[open] summary:before {
+    content: " ▼";
+    color:black;
+    font-size: 30px;
 }
   
 details{
@@ -170,7 +175,7 @@ details{
 img.eixo-icon{
     max-width: 50px;
     float: left;
-    margin: 7px;
+    margin: -50px 0px -50px -30px;
 }
 h1,h2,h3,h4{
     text-transform: uppercase;
@@ -199,6 +204,9 @@ div#propostas{
     div#textuario{
         display: block;
     }
+    #botaoprop{
+        display: block;
+    }
   }
 
   @media only screen and (min-width: 1000px) {
@@ -207,5 +215,11 @@ div#propostas{
     }
     div#textuario{
         display: flex;
+    }
+    #botaoprop{
+        display: none;
+    }
+    details[open]{
+        max-width:573px;
     }
   }
