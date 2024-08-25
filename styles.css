@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+article{
+    margin: 7px;
+    padding:10px;
+}
+
+header {
+    background-color: #2c9f67;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Garantir que a imagem não transborde */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.candidate-photo {
+    max-width: 250px; /* Tamanho da imagem */
+    max-height: 150px;
+    opacity: 1; /* Transparência da imagem */
+    border-radius: 50%; /* Para deixar a imagem circular */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    position: relative;
+}
+
+.text-content h1, 
+.text-content h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.text-content {
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+header h1.grande{
+    font-size: 5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+p{
+    text-align: justify;
+    text-indent: 5ch;
+    padding:0px 10px;
+}
+
+.social-media {
+    background-color: #13367b;
+    padding: 10px 0;
+    color:black;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.social-media ul li {
+    margin: 0 15px;
+    display:grid;
+}
+
+.social-media ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-media ul li a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+summary {
+    list-style: none;
+    padding: 10px 10px 10px 40px;
+    background: url(https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg) no-repeat 14px 50%;
+    background-size: 18px;
+    font-weight: bold;
+    background-color: #e0d9d8;
+    color: #308e4e;
+    border-radius: 5px;
+}
+  
+summary::-webkit-details-marker {
+    display: none;
+}
+  
+details[open] summary {
+    border-radius: 5px 5px 0 0;
+}
+  
+details{
+    background: #2196F3;
+    color: white;
+    border-radius: 5px;
+    margin:7px 0px;
+    padding:3px;
+    break-inside: avoid;
+}
+img.eixo-icon{
+    max-width: 50px;
+    float: left;
+    margin: 7px;
+}
+h1,h2,h3,h4{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+div#propostas{
+    break-inside: avoid;
+}
+
+#botaoprop{
+    background-color: #308e4e;
+    color:#ddd;
+    padding: 7px;
+    margin:auto;
+    width: 99%;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 7px;
+}
+
+@media only screen and (max-width: 1000px) {
+    div#proposta, article {
+      width: 96vw;
+    }
+    div#textuario{
+        display: block;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    div#proposta, article {
+      width: 50vw;
+    }
+    div#textuario{
+        display: flex;
+    }
+  }
